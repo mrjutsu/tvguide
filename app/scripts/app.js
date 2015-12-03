@@ -31,7 +31,7 @@ angular
         controller: 'TvshowsCtrl',
         controllerAs: 'tvshows'
       })
-      .when('/tvshow', {
+      .when('/shows/:id', {
         templateUrl: 'views/tvshow.html',
         controller: 'TvshowCtrl',
         controllerAs: 'tvshow'

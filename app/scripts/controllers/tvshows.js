@@ -8,10 +8,6 @@
  * Controller of the tvguideApp
  */
 angular.module('tvguideApp')
-  .controller('TvshowsCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('TvshowsCtrl',[ '$scope', 'Shows', function ($scope,Shows) {
+    $scope.shows = Shows.query();
+  }]);

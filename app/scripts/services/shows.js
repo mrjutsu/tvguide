@@ -8,16 +8,11 @@
  * Factory in the tvguideApp.
  */
 angular.module('tvguideApp')
-  .factory('shows', function () {
-    // Service logic
-    // ...
-
-    var meaningOfLife = 42;
-
-    // Public API here
-    return {
-      someMethod: function () {
-        return meaningOfLife;
-      }
-    };
-  });
+  .factory('Shows', [ '$resource', function ($resource) {
+    return $resource('http://api.tvmaze.com/shows', {},
+		{
+			query: { method: 'GET',
+				isArray: true
+		  }
+	  });
+  }]);

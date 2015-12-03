@@ -1,1 +1,7 @@
-<p>This is the tvshows view.</p>
+<div ng-controller="TvshowsCtrl">
+	<!-- <div ng-repeat="show in shows | filter:query | orderBy:orderProp"> -->
+	<div ng-repeat="show in shows">
+		<h1>ID: {{ show.id }}</h1>
+		<!-- <h2><a href="#/city/{{ city.city_id }}">{{ city.name }}</a></h2> -->
+	</div>
+</div>
