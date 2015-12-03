@@ -26,7 +26,7 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
-      .when('/tvshows', {
+      .when('/shows', {
         templateUrl: 'views/tvshows.html',
         controller: 'TvshowsCtrl',
         controllerAs: 'tvshows'
