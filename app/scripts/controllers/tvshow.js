@@ -8,10 +8,6 @@
  * Controller of the tvguideApp
  */
 angular.module('tvguideApp')
-  .controller('TvshowCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('TvshowCtrl', [ '$scope','$routeParams','ShowDetail',function ($scope,$routeParams,ShowDetail) {
+    $scope.show = ShowDetail.get({ showId: $routeParams.id });
+  }]);

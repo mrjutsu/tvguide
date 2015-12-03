@@ -1,9 +1,9 @@
 <div ng-controller="TvshowsCtrl">
 	<!-- <div ng-repeat="show in shows | filter:query | orderBy:orderProp"> -->
 	<div class="tvshow" ng-repeat="show in shows">
-    <img src="{{ show.image.medium }}" alt="{{ show.name }}" />
-		<h3>{{ show.name }}</h3>
-    <p ng-bind-html="show.summary">
-    </p>
+    <a href="#/shows/{{show.id}}">
+      <img src="{{ show.image.medium }}" alt="{{ show.name }}" />
+  		<span>{{ show.name }}</span>
+    </a>
 	</div>
 </div>
