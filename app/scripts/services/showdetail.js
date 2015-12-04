@@ -13,8 +13,6 @@ angular.module('tvguideApp')
 		{
 			query: {
         method: 'GET',
-        // params:  { show_id: show_id },
-			  // isArray: true
 		  }
 	  });
   }]);

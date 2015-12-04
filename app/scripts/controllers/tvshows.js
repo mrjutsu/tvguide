@@ -8,6 +8,9 @@
  * Controller of the tvguideApp
  */
 angular.module('tvguideApp')
-  .controller('TvshowsCtrl',[ '$scope', 'Shows', function ($scope,Shows) {
-    $scope.shows = Shows.query();
+  .controller('TvshowsCtrl',[ '$scope', 'TVGuideServices', function ($scope,TVGuideServices) {
+    // $scope.shows = TVGuideServices.query();
+    $scope.shows = TVGuideServices.all().then(function(shows){
+      $scope.shows = shows;
+    });
   }]);
