@@ -1,1 +1,14 @@
-<h2>{{show.name}}</h2>
+<div ng-controller="TvshowCtrl">
+  <img src="{{show.image.medium}}" alt="{{show.name}}" />
+  <h2>{{show.name}}</h2>
+  <p ng-bind-html="show.summary"></p>
+  <div class="show-cast">
+    <h3>Cast</h3>
+    <div class="cast-actor" ng-repeat="actor in cast">
+      <a href="#/people/{{ actor.person.id }}">
+        <img src="{{ actor.person.image.medium }}" alt="{{ actor.name }}" />
+        <span>{{ actor.person.name }} ({{ actor.character.name }})</span>
+      </a>
+    </div>
+  </div>
+</div>
