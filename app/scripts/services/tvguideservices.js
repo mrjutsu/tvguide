@@ -42,9 +42,22 @@ angular.module('tvguideApp')
   	  });
     }
 
+    function getEpisodes(id) {
+      var url = "http://api.tvmaze.com/shows/:showID:/episodes"
+        .replace(":showID:",id);
+      return $resource(url, {},
+  		{
+  			query: {
+          method: 'GET',
+          isArray: true
+  		  }
+  	  });
+    }
+
     return {
       all: all,
       showDetail: showDetail,
-      getCast: getCast
+      getCast: getCast,
+      getEpisodes: getEpisodes
     };
   }]);

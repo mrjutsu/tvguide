@@ -11,4 +11,5 @@ angular.module('tvguideApp')
   .controller('TvshowCtrl', [ '$scope','$routeParams','TVGuideServices',function ($scope,$routeParams,TVGuideServices) {
     $scope.show = TVGuideServices.showDetail($routeParams.id).query();
     $scope.cast = TVGuideServices.getCast($routeParams.id).query();
+    $scope.episodes = TVGuideServices.getEpisodes($routeParams.id).query();
   }]);
