@@ -8,28 +8,43 @@
  * Factory in the tvguideApp.
  */
 angular.module('tvguideApp')
-  .factory('TVGuideServices', [ '$http', '$q', function ($http,$q) {
+  .factory('TVGuideServices', [ '$http', '$q','$resource', function ($http,$q,$resource) {
 
-    function all(){
-
-      var deferred = $q.defer();
-
-      $http.get('http://api.tvmaze.com/shows')
-        .success(function(shows){
-          deferred.resolve(shows);
-      });
-
-      return deferred.promise;
+    function all() {
+      return $resource('http://api.tvmaze.com/shows', {},
+  		{
+  			query: {
+          method: 'GET',
+  				isArray: true
+  		  }
+  	  });
     }
 
-    // return $resource('http://api.tvmaze.com/shows', {},
-		// {
-		// 	query: { method: 'GET',
-		// 		isArray: true
-		//   }
-	  // });
+    function showDetail(id) {
+      var url = "http://api.tvmaze.com/shows/:showID:".replace(":showID:",id);
+      return $resource(url, {},
+  		{
+  			query: {
+          method: 'GET',
+  		  }
+  	  });
+    }
+
+    function getCast(id) {
+      var url = "http://api.tvmaze.com/shows/:showID:/cast"
+        .replace(":showID:",id);
+      return $resource(url, {},
+  		{
+  			query: {
+          method: 'GET',
+          isArray: true
+  		  }
+  	  });
+    }
 
     return {
-      all: all
+      all: all,
+      showDetail: showDetail,
+      getCast: getCast
     };
   }]);
