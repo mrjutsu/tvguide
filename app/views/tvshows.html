@@ -1,4 +1,7 @@
 <div ng-controller="TvshowsCtrl" class="show-list">
+	<div class="spinner" ng-hide="shows.$resolved">
+		<i class="fa fa-refresh fa-spin fa-4x"></i>
+	</div>
 	<!-- <div ng-repeat="show in shows | filter:query | orderBy:orderProp"> -->
 	<div class="tvshow" ng-repeat="show in shows">
     <a href="#/shows/{{show.id}}">
