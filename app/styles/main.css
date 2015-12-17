@@ -1,11 +1,16 @@
 html {
   font-size: 16px;
+  font-family: sans-serif;
 }
 
 @media (max-width: 480px) {
 
+  /*HEADER STYLES*/
   #menu-chk {
     display: none;
+  }
+  #menu-lb {
+    cursor: pointer;
   }
   .menu-bars {
     color: white;
@@ -29,7 +34,6 @@ html {
     background-color: black;
   }
     .nav-list li {
-      /*color: white;*/
       font-size: 1.3rem;
       padding: 10px 0;
     }
@@ -38,6 +42,8 @@ html {
       text-decoration: none;
       color: white;
     }
+
+  /*TV SHOWS INDEX STYLES*/
   .show-list {
     display: flex;
     flex-direction: row;
@@ -62,4 +68,32 @@ html {
         margin: 0 0;
         text-align: center;
       }
+
+  /*ABOUT STYLES*/
+  .about-h2 {
+    text-align: center;
+    font-size: 2.2rem;
+  }
+  .about-p {
+    margin: 5px 20px;
+    font-size: 1.2rem;
+    text-align: justify;
+    line-height: 30px;
+  }
+  .about-div {
+    margin: 50px 0;
+  }
+  .about-links {
+    display: block;
+    font-size: 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    width: 40%;
+    margin: 25px auto;
+    padding: 5px 0;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: grey;
+    color: grey;
+  }
 }

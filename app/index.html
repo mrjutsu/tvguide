@@ -27,7 +27,7 @@
       <nav class="nav-menu">
         <div class="menu-icon">
           <button type="button" name="button" id="menu-chk" ng-click="Nav.switchNav()"></button>
-          <label for="menu-chk">
+          <label for="menu-chk" id="menu-lb">
             <i class="fa fa-bars fa-2x menu-bars"></i>
           </label>
         </div>
@@ -48,13 +48,6 @@
     <div class="container">
       <div ng-view=""></div>
     </div>
-
-    <div class="footer">
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
-    </div>
-
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
