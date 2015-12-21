@@ -12,4 +12,7 @@ angular.module('tvguideApp')
     $scope.show = TVGuideServices.showDetail($routeParams.id).query();
     $scope.cast = TVGuideServices.getCast($routeParams.id).query();
     $scope.episodes = TVGuideServices.getEpisodes($routeParams.id).query();
+    $scope.bySeason = function(episodes) {
+      return episodes.season === episodes.season;
+    };
   }]);

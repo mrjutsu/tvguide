@@ -3,7 +3,7 @@
 		<i class="fa fa-refresh fa-spin fa-4x"></i>
 	</div>
 	<!-- <div ng-repeat="show in shows | filter:query | orderBy:orderProp"> -->
-	<div class="tvshow" ng-repeat="show in shows">
+	<div class="tvshow" ng-repeat="show in shows | orderBy:'rating.average'">
     <a href="#/shows/{{show.id}}">
       <img src="{{ show.image.medium }}" alt="{{ show.name }}" class="show-img" />
   		<p>{{ show.name }}</p>

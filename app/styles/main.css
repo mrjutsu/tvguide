@@ -55,6 +55,7 @@ html {
       margin: 10px 0;
       background-color: black;
       width: 210px;
+      /*height: 350px;*/
     }
       .show-img {
         overflow: hidden;
@@ -95,5 +96,77 @@ html {
     border-radius: 5px;
     border-color: grey;
     color: grey;
+  }
+
+  /*SHOW STYLES*/
+  .show-img {
+    display: block;
+    margin: 25px auto;
+  }
+  .show-h2 {
+    text-align: center;
+    font-size: 2.3rem;
+  }
+  .show-summary {
+    text-align: justify;
+    margin: 0 20px;
+    line-height: 30px;
+    font-size: 1.1rem;
+  }
+  .show-cast {
+    display: block;
+    margin: 0 5px;
+    border-style: solid;
+    border-color: grey;
+    border-width: 2px;
+  }
+  .show-h3 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .cast-actor {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .cast-member {
+    margin: 0 10px;
+  }
+    .member-img {
+      margin: 10px 0;
+      width: 150px;
+      height: auto;
+    }
+    .member-name {
+      margin: auto 5px;
+      color: black;
+      text-decoration: none;
+      flex: 0 40%;
+      font-size: 1.2rem;
+    }
+
+  /*EPISODE STYLES*/
+  .episode-name {
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  .episode-number {
+    text-align: center;
+    font-size: 1rem;
+  }
+  .episode-aired {
+    text-align: center;
+  }
+  .episode-img {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .episode-season {
+    margin-left: 20px;
+  }
+  .episode-summary {
+    text-align: justify;
+    margin: 5px 10px;
+    line-height: 25px;
   }
 }

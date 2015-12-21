@@ -1,7 +1,7 @@
 <div ng-controller="TvshowCtrl">
-  <img src="{{show.image.medium}}" alt="{{show.name}}" />
-  <h2>{{show.name}}</h2>
-  <p ng-bind-html="show.summary"></p>
+  <img src="{{show.image.medium}}" alt="{{show.name}}" class="show-img" />
+  <h2 class="show-h2">{{show.name}}</h2>
+  <p ng-bind-html="show.summary" class="show-summary"></p>
   <show_cast></show_cast>
   <show_episodes><show_episodes>
 </div>
