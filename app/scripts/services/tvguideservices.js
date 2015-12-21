@@ -54,10 +54,23 @@ angular.module('tvguideApp')
   	  });
     }
 
+    function getActor(id) {
+      var url = "http://api.tvmaze.com/people/:peopleID:"
+        .replace(":peopleID:",id);
+      return $resource(url, {},
+  		{
+  			query: {
+          method: 'GET',
+          // isArray: true
+  		  }
+  	  });
+    }
+
     return {
       all: all,
       showDetail: showDetail,
       getCast: getCast,
-      getEpisodes: getEpisodes
+      getEpisodes: getEpisodes,
+      getActor: getActor
     };
   }]);
