@@ -23,24 +23,7 @@
 
     <!-- Add your site or application content here -->
 
-    <div ng-controller="NavigationCtrl as Nav">
-      <nav class="nav-menu">
-        <div class="menu-icon">
-          <button type="button" name="button" id="menu-chk" ng-click="Nav.switchNav()"></button>
-          <label for="menu-chk" id="menu-lb">
-            <i class="fa fa-bars fa-2x menu-bars"></i>
-          </label>
-        </div>
-      </nav>
-      <ul class="nav-list" ng-show="Nav.navigation === true">
-        <li>
-          <a href="#/shows" class="menu-btns">Shows</a>
-        </li>
-        <li>
-          <a href="#/about" class="menu-btns">About</a>
-        </li>
-      </ul>
-    </div>
+    <phone_header></phone_header>
 
     <div class="container">
       <div ng-view=""></div>
@@ -78,6 +61,7 @@
         <script src="scripts/directives/show_cast.js"></script>
         <script src="scripts/directives/show_episodes.js"></script>
         <script src="scripts/controllers/navigation.js"></script>
+        <script src="scripts/directives/phone_header.js"></script>
         <!-- endbuild -->
 </body>
 </html>

@@ -1,0 +1,18 @@
+<div ng-controller="NavigationCtrl as Nav">
+  <nav class="nav-menu">
+    <div class="menu-icon">
+      <button type="button" name="button" id="menu-chk" ng-click="Nav.switchNav()"></button>
+      <label for="menu-chk" id="menu-lb">
+        <i class="fa fa-bars fa-2x menu-bars"></i>
+      </label>
+    </div>
+  </nav>
+  <ul class="nav-list" ng-show="Nav.navigation === true">
+    <li>
+      <a href="#/shows" class="menu-btns">Shows</a>
+    </li>
+    <li>
+      <a href="#/about" class="menu-btns">About</a>
+    </li>
+  </ul>
+</div>
