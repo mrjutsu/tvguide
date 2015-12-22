@@ -1,4 +1,7 @@
 <div ng-controller="TvshowsCtrl" class="show-list">
+	<div class="search-bar">
+		<input ng-model="query" placeholder="Search for a TV show">
+	</div>
 	<div class="spinner" ng-hide="shows.$resolved">
 		<i class="fa fa-refresh fa-spin fa-4x"></i>
 	</div>
