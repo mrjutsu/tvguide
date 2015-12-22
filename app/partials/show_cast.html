@@ -1,11 +1,11 @@
 <h3 class="show-h3">Cast</h3>
 <div class="show-cast">
   <div class="cast-actor" ng-repeat="actor in cast">
-    <a href="#/people/{{ actor.person.id }}" class="cast-member">
+    <div class="cast-member">
       <img src="{{ actor.person.image.medium }}" alt="{{ actor.name }}" class="member-img" />
-    </a>
-    <a href="#/people/{{ actor.person.id }}" class="member-name">
+    </div>
+    <p class="member-name">
       {{ actor.person.name }} ({{ actor.character.name }})
-    </a>
+    </p>
   </div>
 </div>
